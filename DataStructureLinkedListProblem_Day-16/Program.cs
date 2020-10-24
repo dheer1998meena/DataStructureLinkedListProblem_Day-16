@@ -8,7 +8,7 @@ using System;
 
 namespace DataStructureLinkedListProblem_Day_16
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -19,8 +19,8 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertElement(56);
             linkedList.InsertElement(30);
             linkedList.InsertElement(70);
-            // UC7 Seraching element in the linked list.
-            Console.WriteLine("Searching element 30 :"+ linkedList.SearchNode(30));
+            //UC7 Seraching element in the linked list.
+            Console.WriteLine("Searching Element 30 :" + linkedList.SearchNode(30));
             linkedList.DisplayList();
         }
     }
