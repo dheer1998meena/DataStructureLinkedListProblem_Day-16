@@ -18,7 +18,7 @@ namespace DataStructureLinkedListProblem_Day_16
         ///  UC1 Crating simple Linked List insert the node .
         /// </summary>
         /// <param name="newData"></param>
-        public void InsertLast(int newData)
+        public void InsertElement(int newData)
         {
             // Creating a new node to insert.
             Node newNode = new Node(newData);
@@ -106,6 +106,49 @@ namespace DataStructureLinkedListProblem_Day_16
             return temp;
         }
         /// <summary>
+        /// UC4 Inset the node at a particular position of linked list.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="newData"></param>
+        /// <returns></returns>
+        public Node InsertAtParticularPosition(int position , int newData)
+        {
+            //If the position is not found the beginging then return an Invalid position
+            if (position <1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+           //If position is first Insert at the begining of the linked list
+            else if (position ==1)
+            {
+                Node newNode = new Node(newData);
+                newNode.Next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                //Iterating while loop decrementation of position.
+                while (position-- !=0)
+                {
+                    if (position == 1)
+                    {
+                        //Creating a new node
+                        Node node = new Node(newData);
+                        //Adding the node to the next position of the node
+                        node.Next = this.head.Next;
+                        head.Next = node;
+                        break;
+                    }
+                    head = head.Next;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Position is out of range");
+                }
+            }
+            return head;
+        }
+        /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
         /// </summary>
         public void DisplayList()
@@ -125,6 +168,7 @@ namespace DataStructureLinkedListProblem_Day_16
                 while(temp != null)
                 {
                     Console.Write(" " + temp.data);
+                    //checking if other nodes are present in the list by moving the temp to next node
                     temp = temp.Next;
                 }
             }
