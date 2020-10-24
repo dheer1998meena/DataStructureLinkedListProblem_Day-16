@@ -43,7 +43,7 @@ namespace DataStructureLinkedListProblem_Day_16
         /// <returns></returns>
         public Node GetLastNode()
         {
-            //Here we will take the copy the head  into temp.
+            //initialising temp variable for checking head pointer
             Node temp = this.head;
             //iterating the temp till the temp is pointing towards null.
             while (temp.Next != null)
@@ -96,7 +96,7 @@ namespace DataStructureLinkedListProblem_Day_16
         /// <returns></returns>
         public Node GetAppendLastNode()
         {
-            //Here we will take the copy the head  into temp.
+            //initialising temp variable for checking head pointer
             Node temp = this.head;
             //iterating the temp till the temp is pointing towards null.
             while (temp.Next != null)
@@ -149,7 +149,7 @@ namespace DataStructureLinkedListProblem_Day_16
             return head;
         }
         /// <summary>
-        ///UC5 Deleting the first node in the Linked List.
+        ///UC5 Deleting the first node from the Linked List.
         /// </summary>
         /// <returns></returns>
         public Node DeleteFirstNode()
@@ -192,6 +192,27 @@ namespace DataStructureLinkedListProblem_Day_16
                 temp.Next = null;
                 return null;
             }
+        }
+        /// <summary>
+        /// UC7 Seraching element in the linked list.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool SearchNode(int value)
+        {
+            //initialising temp variable for checking head pointer
+            Node temp = new Node(value);
+            while(temp != null)
+            {
+                if(temp.data == value)
+                {
+                    Console.WriteLine("Node is found :" + value);
+                    return true;
+                }
+                temp = temp.Next;
+            }
+            Console.WriteLine("Node is not found");
+            return false;
         }
         /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
