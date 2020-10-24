@@ -15,12 +15,12 @@ namespace DataStructureLinkedListProblem_Day_16
             Console.WriteLine("Welcome to Data Structure Linked List problem");
             LinkedList linkedList = new LinkedList();
            
-            // Inserting the node at the begining.
-            linkedList.InsertFront(70);
-            linkedList.InsertFront(30);
-            linkedList.InsertFront(56);
-            // Deleting the first element in the Linked List.
-            linkedList.DeleteFirstNode();
+            // Inserting the node in the lisnked list.
+            linkedList.InsertElement(56);
+            linkedList.InsertElement(30);
+            linkedList.InsertElement(70);
+            // UC6 Deleting last node from the linked list.
+            linkedList.DeleteLastNode();
             linkedList.DisplayList();
         }
     }

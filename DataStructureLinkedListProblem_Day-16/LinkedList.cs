@@ -149,7 +149,7 @@ namespace DataStructureLinkedListProblem_Day_16
             return head;
         }
         /// <summary>
-        ///UC5 Deleting the first element in the Linked List.
+        ///UC5 Deleting the first node in the Linked List.
         /// </summary>
         /// <returns></returns>
         public Node DeleteFirstNode()
@@ -164,6 +164,33 @@ namespace DataStructureLinkedListProblem_Day_16
                 //Here move the head pointer to next node, previous will automatically deleted.
                 this.head = this.head.Next;
                 return this.head;
+            }
+        }
+        /// <summary>
+        /// UC6 Deleting last node from the linked list.
+        /// </summary>
+        /// <returns></returns>
+        public Node DeleteLastNode()
+        {
+            if(this.head == null)
+            {
+                return null;
+            }
+            else if (this.head.Next == null)
+            {
+                return null;
+            }
+            else
+            {
+                Node temp = this.head;
+                // iterating while loop till the last node is not equal to null.
+                while (temp.Next.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                //Here delete the last node and it is allocated to garbage collection
+                temp.Next = null;
+                return null;
             }
         }
         /// <summary>
