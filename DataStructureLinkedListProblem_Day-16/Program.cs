@@ -19,8 +19,8 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertElement(56);
             linkedList.InsertElement(30);
             linkedList.InsertElement(70);
-            // UC6 Deleting last node from the linked list.
-            linkedList.DeleteLastNode();
+            // UC7 Seraching element in the linked list.
+            Console.WriteLine("Searching element 30 :"+ linkedList.SearchNode(30));
             linkedList.DisplayList();
         }
     }
