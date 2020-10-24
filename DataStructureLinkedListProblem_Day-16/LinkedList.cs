@@ -202,9 +202,9 @@ namespace DataStructureLinkedListProblem_Day_16
         {
             //initialising temp variable for checking head pointer
             Node temp = new Node(value);
-            while(temp != null)
+            while (temp != null)
             {
-                if(temp.data == value)
+                if (temp.data == value)
                 {
                     Console.WriteLine("Node is found :" + value);
                     return true;
