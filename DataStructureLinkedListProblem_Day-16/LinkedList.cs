@@ -149,7 +149,7 @@ namespace DataStructureLinkedListProblem_Day_16
             return head;
         }
         /// <summary>
-        ///UC5 Deleting the first node in the Linked List.
+        ///UC5 Deleting the first element in the Linked List.
         /// </summary>
         /// <returns></returns>
         public Node DeleteFirstNode()

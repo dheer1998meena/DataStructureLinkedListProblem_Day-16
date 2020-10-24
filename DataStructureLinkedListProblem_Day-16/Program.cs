@@ -19,7 +19,7 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertFront(70);
             linkedList.InsertFront(30);
             linkedList.InsertFront(56);
-            // Deleting the first node in the Linked List.
+            // Deleting the first element in the Linked List.
             linkedList.DeleteFirstNode();
             linkedList.DisplayList();
         }
