@@ -44,7 +44,7 @@ namespace DataStructureLinkedListProblem_Day_16
         public Node GetLastNode()
         {
             //Here we will take the copy the head  into temp.
-            Node temp = head;
+            Node temp = this.head;
             //iterating the temp till the temp is pointing towards null.
             while (temp.Next != null)
             {
