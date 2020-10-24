@@ -22,6 +22,10 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertFront(70);
             linkedList.InsertFront(30);
             linkedList.InsertFront(56);
+            //UC3 Crating Linked List Append the node at last.
+            linkedList.AppendAtLast(56);
+            linkedList.AppendAtLast(30);
+            linkedList.AppendAtLast(70);
             linkedList.DisplayList();
         }
     }
