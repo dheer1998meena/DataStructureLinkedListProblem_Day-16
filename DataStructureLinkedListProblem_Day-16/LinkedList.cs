@@ -149,6 +149,24 @@ namespace DataStructureLinkedListProblem_Day_16
             return head;
         }
         /// <summary>
+        ///UC5 Deleting the first node in the Linked List.
+        /// </summary>
+        /// <returns></returns>
+        public Node DeleteFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            else
+            {
+                Console.WriteLine("Deleted element is :" + this.head.data);
+                //Here move the head pointer to next node, previous will automatically deleted.
+                this.head = this.head.Next;
+                return this.head;
+            }
+        }
+        /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
         /// </summary>
         public void DisplayList()

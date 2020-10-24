@@ -17,8 +17,10 @@ namespace DataStructureLinkedListProblem_Day_16
            
             // Inserting the node at the begining.
             linkedList.InsertFront(70);
+            linkedList.InsertFront(30);
             linkedList.InsertFront(56);
-            linkedList.InsertAtParticularPosition(2, 30);
+            // Deleting the first node in the Linked List.
+            linkedList.DeleteFirstNode();
             linkedList.DisplayList();
         }
     }
