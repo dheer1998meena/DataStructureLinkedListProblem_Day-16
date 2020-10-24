@@ -68,6 +68,44 @@ namespace DataStructureLinkedListProblem_Day_16
             Console.WriteLine("Inserted into list at beagining :" + newNode.data);
         }
         /// <summary>
+        ///  UC3 Crating Linked List Append the node at last .
+        /// </summary>
+        /// <param name="newData"></param>
+        public void AppendAtLast(int newData)
+        {
+            // Creating a new node to insert.
+            Node newNode = new Node(newData);
+            // Initially head point to null.
+            //Checking if condition first.
+            if (this.head == null)
+            {
+                this.head = newNode; // if head is null then head to asign new node here(head will point new node).
+            }
+            // else get the last node.
+            // then last node will attach new node 
+            else
+            {
+                Node lastNode = GetAppendLastNode();
+                lastNode.Next = newNode;
+            }
+            Console.WriteLine("Inserted into list at Append Last:" + newNode.data);
+        }
+        /// <summary>
+        /// Creating GetLastNode for identify the last node
+        /// </summary>
+        /// <returns></returns>
+        public Node GetAppendLastNode()
+        {
+            //Here we will take the copy the head  into temp.
+            Node temp = this.head;
+            //iterating the temp till the temp is pointing towards null.
+            while (temp.Next != null)
+            {
+                temp = temp.Next;
+            }
+            return temp;
+        }
+        /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
         /// </summary>
         public void DisplayList()
