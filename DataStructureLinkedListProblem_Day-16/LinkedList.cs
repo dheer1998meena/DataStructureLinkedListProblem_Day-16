@@ -15,7 +15,7 @@ namespace DataStructureLinkedListProblem_Day_16
         // Head node to mark the begining of the linked list
         public Node head;
         /// <summary>
-        ///  UC1 Crating Linked List insert the node at last.
+        ///  UC1 Crating simple Linked List insert the node .
         /// </summary>
         /// <param name="newData"></param>
         public void InsertLast(int newData)

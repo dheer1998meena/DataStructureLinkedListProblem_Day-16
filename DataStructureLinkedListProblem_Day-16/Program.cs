@@ -14,11 +14,10 @@ namespace DataStructureLinkedListProblem_Day_16
         {
             Console.WriteLine("Welcome to Data Structure Linked List problem");
             LinkedList linkedList = new LinkedList();
-            // UC1 Creating Linked list insert the node at last
+           // UC1 Crating simple Linked List insert the node .
             linkedList.InsertLast(56);
             linkedList.InsertLast(30);
             linkedList.InsertLast(70);
-            linkedList.DisplayList();
             // UC2 Inserting the node at the begining.
             linkedList.InsertFront(70);
             linkedList.InsertFront(30);
