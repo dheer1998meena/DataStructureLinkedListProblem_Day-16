@@ -351,6 +351,33 @@ namespace DataStructureLinkedListProblem_Day_16
                 }
             }
         }
+        // UC 10- Sorting the elements of the Linked List In the Ascending order
+        public void SortLinkedList()
+        {
+            // Checking If head is pointing to null or not
+            if (this.head == null)
+            {
+                Console.WriteLine("The LinkedList is Empty");
+            }
+            else
+            {
+                //temporary variable to check if head is pointing to null or not and traverse along the linked list
+                Node temp = this.head;
+                // iterating along the linked list
+                while (temp.Next != null)
+                {
+                    int temp2 = 0;
+                    // checking if the previous data is greater than the next data in the pointer
+                    if (temp.data > temp.Next.data)
+                    {
+                        temp2 = temp.data;
+                        temp.data = temp.Next.data;
+                        temp.Next.data = temp2;
+                    }
+                    temp = temp.Next;
+                }
+            }
+        }
 
         /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
