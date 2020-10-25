@@ -12,15 +12,16 @@ namespace LinkedListMsTest
     [TestClass]
     public class UnitTest1
     {
-        [DataRow(30)]
+        [DataRow(30, 40)]
+        [TestCategory("Testing the position of the node")]
         [TestMethod]
-        public void GivenElementSearchElementTest(int value)
+        public void EnterAfterParticualarPositionTest(int value, int position)
         {
             //Arrange
-            bool expected = true;
-            LinkedList linkedlist = new LinkedList();
+            LinkedList list = new LinkedList();
             //Act
-            bool actual = linkedlist.SearchNode(value);
+            int expected = 40;
+            int actual = list.InsertParticularPosition(30, 40);
             //Assert
             Assert.AreEqual(expected, actual);
         }

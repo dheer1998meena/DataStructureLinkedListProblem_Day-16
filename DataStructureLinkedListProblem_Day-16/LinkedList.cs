@@ -214,6 +214,39 @@ namespace DataStructureLinkedListProblem_Day_16
             Console.WriteLine("Node is not found");
             return false;
         }
+        //UC8 Ability to Insert node 40 after node 30
+        public int InsertParticularPosition(int position, int newData)
+        {
+            //Creating a new node.
+            Node newNode = new Node(newData);
+            if(this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            else
+            {
+                //Creating a temporary variable which act as head pointer to check for new node.
+                Node temp = this.head;
+                bool flag = true;
+                while(flag)
+                {
+                    // Checking if the pointer is pointing towards entered position
+                    if(temp.data == position)
+                    {
+                        flag = false;
+                    }
+                    else
+                    {
+                        temp = temp.Next;
+                    }
+                }
+                //Declaring new node to points toward next node
+                newNode.Next = temp.Next;
+                temp.Next = newNode;
+            }
+            return newData;
+        }
+        
         /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
         /// </summary>

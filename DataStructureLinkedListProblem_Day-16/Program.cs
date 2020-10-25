@@ -19,8 +19,8 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertElement(56);
             linkedList.InsertElement(30);
             linkedList.InsertElement(70);
-            //UC7 Seraching element in the linked list.
-            Console.WriteLine("Searching Element 30 :" + linkedList.SearchNode(30));
+            //UC8 Ability to Insert node 40 after node 30.
+            linkedList.InsertParticularPosition(30, 40);
             linkedList.DisplayList();
         }
     }
