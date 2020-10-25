@@ -15,7 +15,7 @@ namespace DataStructureLinkedListProblem_Day_16
             Console.WriteLine("Welcome to Data Structure Linked List problem");
             LinkedList linkedList = new LinkedList();
 
-            // UC9 Ability to delete a particular node
+            // UC 10- Sorting the elements of the Linked List In the Ascending order
             linkedList.InsertElement(56);
             linkedList.InsertElement(30);
             linkedList.InsertElement(40);
