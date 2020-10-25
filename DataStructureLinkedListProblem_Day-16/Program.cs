@@ -20,16 +20,9 @@ namespace DataStructureLinkedListProblem_Day_16
             linkedList.InsertElement(30);
             linkedList.InsertElement(40);
             linkedList.InsertElement(70);
-            Console.WriteLine("Enter the element to be deleted ");
-            int delete = Convert.ToInt32(Console.ReadLine());
-            int ifPresent = linkedList.SearchForAnElement(delete);
-            if (ifPresent >= 1)
-            {
-                linkedList.DeleteElement(delete);
-                linkedList.DisplayList();
-            }
-            // Showing the size of the list
-            Console.WriteLine("\nSize of the list after deleting " + linkedList.SizeOfList());
+            linkedList.DisplayList();
+            linkedList.SortLinkedList();
+            linkedList.DisplayList();
             Console.ReadLine();
 
         }
