@@ -246,7 +246,112 @@ namespace DataStructureLinkedListProblem_Day_16
             }
             return newData;
         }
-        
+        // UC9 Method to display the size of the linked list
+        public int SizeOfList()
+        {
+            int size = 0;
+            // if head is poitning to null then size of list is zero.
+            if(this.head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                // Creating a temporay variable to check if head is pointing to null or not.
+                Node temp = this.head;
+                //If head is not pointing to null then increasing the size of list.
+                while(temp.Next != null)
+                {
+                    size++;
+                    temp = temp.Next;
+                }
+                return size + 1;
+            }
+        }
+        //UC9 Method to search for a particular element in the linked list
+        public int SearchForAnElement(int data)
+        {
+            int position = 0;
+            // If head is poitning to null the size of list is zero.
+            if(this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+                return -1;
+            }
+            else
+            {
+                // Creating a temporary variable to check head is pointing to null or not.
+                Node temp = this.head;
+                bool flag = true;
+                while(flag)
+                {
+                    position++;
+                    if(temp.data == data)
+                    {
+                        flag = false;
+                    }
+                    else if (temp.Next != null)
+                    {
+                        if(temp.data == data)
+                        {
+                            return position;
+                        }
+                        else
+                        {
+                            flag = false;
+                            position++;
+                        }
+                    }
+                    else
+                    {
+                        temp = temp.Next;
+                    }
+                }
+                // If the position is exceeding the size of list then showing error message
+                if(position == SizeOfList()+1)
+                {
+                    Console.WriteLine("Element is not found in the list");
+                    return 0;
+                }
+                return position;
+            }
+        }
+        // UC9 Deleting a particular element in the Linked List
+        public void DeleteElement(int newData)
+        {
+            // Checking If head is pointing to null or not
+           if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is Empty");
+            }
+           else
+            {
+                //Creating a temporary variable to check head is pointing to null or not.
+                Node temp = this.head;
+                //Checking if the second node pointer is pointing to null or not.
+                while(temp.Next.Next!= null)
+                {
+                    // If the second node pointer has data then moving pointer to next node.
+                    if(temp.Next.data==newData)
+                    {
+                        temp.Next = temp.Next.Next;
+                    }
+                    else
+                    {
+                        temp = temp.Next;
+                    }
+                }
+                // If second node pointer is pointing to null then value is allocating to garbage collector and deleting that data.
+                if(temp.Next.Next== null)
+                {
+                    if(temp.Next.data == newData)
+                    {
+                        temp.Next = null;
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Creating DisplayList metbhod for displaying the Linkedlist
         /// </summary>
